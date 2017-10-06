@@ -1,0 +1,127 @@
+body {
+  font-family: 'Oswald', sans-serif;
+  overflow-x: hidden;
+}
+
+.intestazione {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: #303F9F;
+  color: #FFFFFF;
+  text-align: center;
+}
+
+.caricafile {
+  position: absolute;
+  width: 45%;
+  height: auto;
+  top:20%;
+  left: 1%;
+  text-align: center;
+  padding-top: 1%;
+  box-shadow: -5px 10px 110px #888888;
+}
+
+#fileuploader {
+  position: absolute;
+  background-color: #FF5722;
+  background-image: url("upload.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  border: 0;
+  border-radius: 3px;
+  color: #FFFFFF;
+  width: 40px;
+  height: 40px;
+}
+
+#fileuploader:hover{
+  background-color: #FF7043;
+}
+
+#fileuploader:active{
+  background-color: #FFAB91;
+}
+
+#filechooser{
+  background-color: #FF5722;
+  border: 0;
+  border-radius: 3px;
+  color: #FFFFFF;
+  font-size: 20px;
+  height: 40px;
+}
+
+#filechooser:hover{
+  background-color: #FF7043;
+}
+
+#filechooser:active{
+  background-color: #FFAB91;
+}
+#browsefilename{
+  position: relative;
+}
+
+.form {
+  position: relative;
+  right: 5%;
+}
+
+.listafile {
+  position: absolute;
+  width: 50%;
+  height: 70%;
+  top:20%;
+  right: 1%;
+  overflow-y: auto;
+  text-align: center;
+  padding-top: 1%;
+  box-shadow: -5px 10px 110px #888888;
+  font-size: 30px;
+}
+
+[class^='link'] {
+  position: relative;
+  margin-top: 2%;
+  margin-left: 1%;
+}
+
+[class^='link'] a {
+  display: inline-block;
+  color: #000000;
+  text-decoration: none;
+}
+
+[class^='link'] a:hover {
+  background-color: #EEEEEE;
+}
+
+[class^='link'] a:active {
+  background-color: #F5F5F5;
+}
+
+.textlink {
+  position: relative;
+  left: 0;
+  margin-right: 5%;
+  background-color: #E0E0E0;
+  width: 90%;
+}
+
+.icon {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 1;
+}
+
+.icon:hover {
+  opacity: 0.5;
+}
+
+.icon:active {
+  opacity: 0.35;
+}
