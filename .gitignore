@@ -57,3 +57,6 @@ typings/
 # dotenv environment variables file
 .env
 
+Serverino/.vs/Serverino/v15/.suo
+Serverino/.vs/slnx.sqlite
+Serverino/.vs/VSWorkspaceState.json
