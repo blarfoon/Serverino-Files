@@ -5,6 +5,8 @@
 - [Getting Started](#getting-started)
     - [Prerequisites](#prerequisites)
     - [Installing](#installing)
+    - [Change The Default Password](#changing-the-default-password)
+    - [Change The Default Port](#changing-the-default-port)
 - [Built With](#built-with)
 - [Contributing](#contributing)
 - [Versioning](#versioning)
@@ -55,7 +57,34 @@ You can then start the server with
 npm start
 ```
 
+The login data are
+
+```
+username: admin
+password: admin
+```
+
 It will now (hopefully) run without errors and open chrome on the web page. If it does not, check the console for errors and let us know if we can help you!
+
+### Changing the default password
+
+If you want to change them you need to go <a href="http://www.htaccesstools.com/htpasswd-generator/">here</a> and generate a new htpasswd string. You can then manually (for now, we're working on it :D) modify the file `users.htpasswd` and paste it. If you want more than one user, just paste on for each line. For example if you want to have
+```
+ admin:admin
+ user:user
+ ```
+ 
+as login data, the file will look like this
+
+```
+admin:$apr1$g5T9kHbL$RUfR6GG6QrWk2dhF0CEbV/
+user:$apr1$ftADaxNV$46OYUim0eXMsaof.Y9mer/
+```
+### Changing the default port
+The default port is 8090 but you can easily change it by editing this line on the file `bin/www.js`
+```js
+app.locals.port = 8090;
+```
 
 ## Built With
 
@@ -71,9 +100,15 @@ It will now (hopefully) run without errors and open chrome on the web page. If i
 4. Push to the branch: `git push origin my-new-feature`
 5. Submit a pull request :D
 
+<b>IMPORTANT!: Remember to change the file version `bin/www.js` if your changes require it. Refer to</b> <a href="#versioning">versioning</a> <b>for more</b>
+
 ## Versioning
 
 We use [SemVer](http://semver.org/) as versioning system.
+If your changes require it, change the actual version on `bin/www.js`
+```
+app.locals.version = "0.0.1";
+```
 
 ## Authors
 

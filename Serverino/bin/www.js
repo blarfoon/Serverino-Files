@@ -8,11 +8,15 @@ var app = require('../app');
 var debug = require('debug')('api.twickt.com:server');
 var http = require('http');
 
+//OPTIONS
+app.locals.version = "0.0.1";
+app.locals.port = 8090;
+
 /**
  * Get port from environment and store in Express.
  */
 
-var port = normalizePort(process.env.PORT || '8090');
+var port = normalizePort(process.env.PORT || app.locals.port);
 app.set('port', port);
 
 /**

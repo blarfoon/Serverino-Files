@@ -42,7 +42,7 @@ var app = express();
 
 app.use(auth.connect(basic));
 // view engine setup
-app.engine('.hbs', expressHbs({defaultLayout: 'layout', extname: '.hbs'}));
+app.engine('.hbs', expressHbs({defaultLayout: 'layout', extname: '.hbs', helpers: { version: function () { return app.locals.version; } }}));
 app.set('view engine', '.hbs');
 
 // uncomment after placing your favicon in /public
