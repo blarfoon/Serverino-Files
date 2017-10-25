@@ -1,0 +1,38 @@
+<div class="container-fluid">
+  <div class="row">
+    <main class="col-sm-10 col-md-10 offset-md-1">
+      {{> header}}
+      <div style="margin-top:3vh;">
+        <div class="row">
+          <div class="col-12 col-lg-3 navigation">
+            <div class="card text-center">
+              <div class="card-body">
+                <h4 class="card-title">Upload New Files</h4>
+                <form id="uploadForm" action="upload" method="post" enctype="multipart/form-data" class="form">
+                  <button id="filechooser" type="button" class="btn btn-primary" style="height:5vh;" onclick="document.getElementById('filebrowser').click();">Browse...</button>
+                  <input id="filebrowser" type="file" name="filetoupload" value="" style="display: none;" />
+                  <input type="hidden" id="filenameinput" />
+                  <button type="submit" class="btn btn-primary" style="height:5vh;" name="button" value="">
+                    <i class="material-icons">file_upload</i>
+                  </button>
+                  <br>
+                  <label for="filebrowser" id="browsefilename">No File Selected</label>
+                </form>
+                <div class="progress" style="margin-top:1vh;">
+                  <div class="progress-bar" role="progressbar" style="height: 20px;"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-lg-9 files" style="max-height:80vh; overflow-y: scroll; overflow-x: hidden;">
+            <ul class="files-list list-group items-list">
+                {{>files files=files directories=directories}}
+            </ul>
+          </div>
+        </div>
+      </div>
+  </div>
+
+  </main>
+</div>
+</div>

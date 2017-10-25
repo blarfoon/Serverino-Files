@@ -1,0 +1,29 @@
+  {{#each directories}}
+<li class="file-item{{@index}} list-group-item">
+    <div class="row">
+        <div class="col-12 col-lg-9 vertical-align">
+            <i class="material-icons" style="margin-right: 10px;">folder</i>
+            {{this}}
+        </div>
+        <div class="col-12 col-lg-3 text-center">
+            <a class="btn btn-success" href="files/{{this}}" role="button">Download</a>
+            <button type="button" id="{{this}}" class="delete{{@index}} btn btn-danger">Delete</button>
+        </div>
+    </div>
+</li>
+{{/each}}
+
+ {{#each files}}
+<li class="file-item{{@index}} list-group-item">
+    <div class="row">
+        <div class="col-12 col-lg-9 vertical-align">
+            <i class="material-icons" style="margin-right: 10px;">insert_drive_file</i>
+            {{this}}
+        </div>
+        <div class="col-12 col-lg-3 text-center">
+            <a class="btn btn-success" href="files/{{this}}" role="button">Download</a>
+            <button type="button" id="{{this}}" class="delete{{@index}} btn btn-danger">Delete</button>
+        </div>
+    </div>
+</li>
+{{/each}}

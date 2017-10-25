@@ -1,3 +1,3 @@
 cd %cd%\Serverino
-node index.js
+npm start
 pause
