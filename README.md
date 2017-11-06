@@ -68,13 +68,13 @@ It will now (hopefully) run without errors and open chrome on the web page. If i
 
 ### Changing the default password
 
-If you want to change them you need to go <a href="http://www.htaccesstools.com/htpasswd-generator/">here</a> and generate a new htpasswd string. You can then manually (for now, we're working on it :D) modify the file `users.htpasswd` and paste it. If you want more than one user, just paste on for each line. For example if you want to have
+If you want to change it you need to go <a href="http://www.htaccesstools.com/htpasswd-generator/">here</a> and generate a new htpasswd string. You can then manually (for now, we're working on it :D) modify the file `users.htpasswd` and paste it. If you want more than one user, just paste one for each line. For example if you want to have
 ```
  admin:admin
  user:user
  ```
  
-as login data, the file will look like this
+as login data, the file should look like this
 
 ```
 admin:$apr1$g5T9kHbL$RUfR6GG6QrWk2dhF0CEbV/

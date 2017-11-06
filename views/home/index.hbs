@@ -7,7 +7,7 @@
           <div class="col-12 col-lg-3 navigation">
             <div class="card text-center">
               <div class="card-body">
-                <h4 class="card-title">Upload New Files</h4>
+                <h4 class="card-title" id="result">Upload New Files</h4>
                 <form id="uploadForm" action="upload" method="post" enctype="multipart/form-data" class="form">
                   <button id="filechooser" type="button" class="btn btn-primary" style="height:5vh;" onclick="document.getElementById('filebrowser').click();">Browse...</button>
                   <input id="filebrowser" type="file" name="filetoupload" value="" style="display: none;" />
@@ -25,8 +25,18 @@
             </div>
           </div>
           <div class="col-12 col-lg-9 files" style="max-height:80vh; overflow-y: scroll; overflow-x: hidden;">
-            <ul class="files-list list-group items-list">
-                {{>files files=files directories=directories}}
+            <div class="card">
+              <div class="card-body">
+                <button type="button" class="btn btn-outline-success">
+                  <i class="material-icons">file_download</i>
+                </button>
+                <button type="button" class="btn btn-outline-danger">
+                  <i class="material-icons">delete</i>
+                </button>
+              </div>
+            </div>
+            <ul class="files-list list-group items-list" style="min-height:60vh;">
+              {{>files files=files directories=directories}}
             </ul>
           </div>
         </div>

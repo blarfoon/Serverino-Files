@@ -20,7 +20,29 @@ $(".items-list").on("click", "[class^='delete']", function () {
     });
 });
 
+
 $(document).ready(function () {
+    $('.files-list').selectable({
+        filter: " > li",
+        cancel: ".ui-splitselect-item .ui-splitselect-handle-drag",
+        selecting: function (event, ui) {
+            $(ui.selecting).addClass('active');
+        },
+        unselecting: function (event, ui) {
+            $(ui.unselecting).removeClass('active');
+        },
+        selected: function (event, ui) {
+            $(ui.selected).addClass('active');
+            var result = $( "#result" ).empty();
+            $(".active", this).each(function () {
+                var index = $(".files-list li").index(this);
+                result.append( " #" + ( index + 1 ) +this);
+            });
+        },
+        unselected: function (event, ui) {
+            $(ui.unselected).removeClass('active');
+        }
+    });
     $('#uploadForm').submit(function () {
         $("#browsefilename").empty().text("File is uploading...");
         $(this).ajaxSubmit({
